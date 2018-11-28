@@ -77,4 +77,39 @@ describe('Thermostat', function() {
     expect(thermostat.getCurrentTemperature()).toEqual(20)
   });
 
+  describe('displays usage levels', function() {
+
+    describe('when the temperature is below 18 degrees', function() {
+
+      it('shows the usage level as low', function() {
+        for (var i = 0; i < 3; i++) {
+          thermostat.down();
+        }
+        expect(thermostat.energyUsage()).toEqual('low-usage')
+      });
+
+    });
+
+    describe('when the temperature is above 25 degrees', function() {
+
+      it('shows the usage level as high', function() {
+        thermostat.switchPowerSavingModeOff();
+        for (var i = 0; i < 6; i++) {
+          thermostat.up();
+        }
+        expect(thermostat.energyUsage()).toEqual('high-usage')
+      });
+
+    });
+
+    describe('when the temperature is between 18 and 25', function() {
+
+      it('shows the usage level as normal', function() {
+        expect(thermostat.energyUsage()).toEqual('medium-usage')
+      });
+
+    });
+
+  });
+
 });

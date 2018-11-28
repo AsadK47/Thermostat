@@ -1,6 +1,7 @@
 'use strict';
 
 function Thermostat() {
+  this.MEDIUM_USAGE_LIMIT = 18;
   this.MAX_PSM_ON_TEMP = 25;
   this.MAX_PSM_OFF_TEMP = 32;
   this.powerSavingMode = true;
@@ -52,4 +53,14 @@ Thermostat.prototype.isMaximumTemperature = function() {
 
 Thermostat.prototype.resetTemperature = function() {
   return this.temperature = this.DEFAULT_TEMPERATURE;
+};
+
+Thermostat.prototype.energyUsage =  function() {
+  if (this.temperature < this.MEDIUM_USAGE_LIMIT) {
+    return 'low-usage';
+  } else if (this.temperature > this.MAX_PSM_ON_TEMP) {
+    return 'high-usage'
+  } else {
+    return 'medium-usage'
+  }
 };
