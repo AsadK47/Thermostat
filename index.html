@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Thermostat</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="src/Thermostat.js"></script>
+  <script src="src/jquery-3.3.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="src/interface.js"></script>
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Thermostat</h1>
+  <p>Go ahead, click some buttons!</p>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Temperature Buttons</h3>
+      <p><button class="button" id="temperature-up">+</button></p>
+      <p><button class="button" id="temperature-down">-</button></p>
+      <h1 id="temperature-read-out"></h1>
+    </div>
+    <div class="col-sm-4">
+      <h3>Reset</h3>
+      <p><button class="button" id="temperature-reset">Reset</button></p>
+      <p>This button will reset your life :) Click with care</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Power saving buttons!</h3>
+      <p><button class="button" id="powersaving-on">PSM on</button></p>
+      <p><button class="button" id="powersaving-off">PSM off</button></p>
+      <p>Power saving mode is <span id="power-saving-status">on</span></p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
