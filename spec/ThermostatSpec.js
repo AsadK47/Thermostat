@@ -70,6 +70,15 @@ describe('Thermostat', function() {
       expect(thermostat.getCurrentTemperature()).toEqual(32)
     });
 
+    it('resets the temp to 25 if PSM is switched back on when temp is above 25', function() {
+      thermostat.switchPowerSavingModeOff();
+      for (var i = 1; i < 13; i++) {
+        thermostat.up();
+      }
+      thermostat.switchPowerSavingModeOn();
+      expect(thermostat.getCurrentTemperature()).toEqual(25)
+    });
+
   });
 
   it('temperature can be reset back to 20 degrees', function() {
