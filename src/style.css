@@ -10,3 +10,15 @@
     margin: 4px 2px;
     cursor: pointer;
 }
+
+.low-usage {
+  color: green;
+}
+
+.medium-usage {
+  color: black;
+}
+
+.high-usage {
+  color: red;
+}

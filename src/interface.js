@@ -4,6 +4,7 @@ $(document).ready(function(){
 
   function updateTemperature() {
     $('#temperature-read-out').text(thermostat.getCurrentTemperature());
+    $('#temperature-read-out').attr('class', thermostat.energyUsage());
   };
 
   $('#temperature-read-out').text(thermostat.getCurrentTemperature());
@@ -23,18 +24,14 @@ $(document).ready(function(){
     updateTemperature();
   });
 
-  function checkPowerSaveStatus() {
-    $('#power-saving-status').text(thermostat.isPowerSavingModeOn());
-  };
-
   $('#powersaving-on').on('click', function() {
     thermostat.switchPowerSavingModeOn();
-    checkPowerSaveStatus();
+    $('#power-saving-status').text('on');
   });
 
   $('#powersaving-off').on('click', function() {
     thermostat.switchPowerSavingModeOff();
-    checkPowerSaveStatus();
+    $('#power-saving-status').text('off');
   });
 
 });
