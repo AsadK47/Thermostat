@@ -1,0 +1,16 @@
+{
+  "name": "thermostat",
+  "description": "thermostat app",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "karma start tests/karma.conf.js --single-run"
+  },
+  "devDependencies": {
+    "jasmine-core": "*",
+    "karma": "*",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-cli": "*",
+    "karma-jasmine": "*",
+    "karma-phantomjs-launcher": "*"
+  }
+}

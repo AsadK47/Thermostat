@@ -1,6 +1,8 @@
 # Thermostat
 
-This is a simple thermostat application made in javascript which has the following functionality:
+This is a simple thermostat application that has been test driven to production in javascript. With the help of jquery the application is fully functional within a web browser.
+
+## Functionality
 
 1. It is able to increase and decrease the temperature on the page, asynchronously, that is to say it can be done without refreshing the page.
 2. The power saving mode, which is turned on by default, can be turned off to increase the temperature to above 25 degrees celsius, up to a maximum of 32 degrees celsius.
@@ -9,11 +11,14 @@ This is a simple thermostat application made in javascript which has the followi
 
 ## Running Tests
 
-To the run the tests for this application, you will have to simply the run the SpecRunner file in your browser. The SpecRunner is html file which is run after copying the path and pasting the URL into the browser an example of how to do this is shown below.
+To the run the tests for this application, you will have to simply the run the SpecRunner file in your browser.
 
+The SpecRunner is html file which is run after copying the path and pasting the URL into the browser and an example of how to do this is shown below.
 
 ![](assets/README-98aebe51.png)
 
 ![](assets/README-de321ba9.png)
 
 ## Running the application
+
+After forking or cloning the repository, copy the file path for index.html into a web browser.
